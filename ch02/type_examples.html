@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 문자형 
+        var s = "JavaScript";
+        var num = "100";
+        var tag ="<h1>String</h1>";
+
+        document.write(s + "<br>");
+        document.write(num + "<br>");
+        document.write(tag + "<br>");
+
+        // 숫자형
+        var s = 100;
+        var t = Number("500"); // 자바스크립트 내장 객체 Number()
+        document.write(s + "<br>");
+        document.write(t + "<br>" + "<br>");
+
+        // 논리형
+        var s = true;   // 변수에 true / false 값 직접 입력
+        var t = 10 >= 100;  // 연산결과 true / false 값 
+        var k = Boolean("hello"); // 자바스크립트 내장 객체 Boolean()
+        document.write(s + "<br>");
+        document.write(t + "<br>");
+        document.write(k + "<br>" + "<br>");
+
+        var m = Boolean(1); // 숫자에서 0 = false , 0이 아닌 값 = true
+        var k = Boolean("홍길동"); // 빈 문자열("") = false, "값" = true 
+        document.write(m + "<br>");
+        document.write(k + "<br>");
+        
+    </script>
+</body>
+</html>

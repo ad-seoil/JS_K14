@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var box; // undifined
+        document.write(box + "<br>");
+        // 값만 비교할때는 ==
+        if(box==null){
+            document.write("undefined" + "<br>");
+        }
+        // 타입까지 비교할때는 ===
+        if(box===null){
+            document.write("undefined" + "<br>");
+        }
+        box = null;
+        document.write(box + "<br>");
+        box = 100;
+        document.write(box + "<br>");
+        box = 30; // 자바스크립트는 값이 저장되는 시점에 타입이 결정됨
+        document.write(box + "<br>");
+        document.write(typeof(box) + "<br>");
+        box = "hello";
+        document.write(typeof(box) + "<br>");
+        document.write(box);
+
+    </script>
+</body>
+</html>
