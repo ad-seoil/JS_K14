@@ -1,1 +1,1 @@
-document.write("Hello World!");
+document.write("환영합니다.");

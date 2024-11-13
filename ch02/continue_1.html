@@ -7,14 +7,12 @@
 </head>
 <body>
   <script>
-    var i=1;//초기값
-    while(i<=30){//조건
-      if(i%2==0 && i%6==0){
-      document.write(i,'<br>');
+    for(var i=1;i<=10;i++){
+       if(i%2==0) 
+          continue;//해당회차를 skip
+      document.write("<p>"+i+"</p>");
     }
-    i++;//증감식
-  }
-    document.write("===== The End =====");
   </script>
+  
 </body>
 </html>
