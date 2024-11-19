@@ -7,11 +7,31 @@
 <script>
 $(function() {
 	$.ajax({
-		url:"js/MOCK_DATA.json",
-		dataType:"json",
+		url:"js/dataset.xml",
+		dataType:"xml",
 		success:function(data) {
-			if(data.length > 0) {
+			var $data = $(data).find("record");
+			console.log($data);
+
+			if($data.length > 0) {
 				var tb = $("<table />");
+
+				$.each($data, function(i,o){
+					var $id = $(o).find("id").text();
+					var $first_name = $(o).find("first_name").text();
+					var $last_name = $(o).find("last_name").text();
+					var $email = $(o).find("email").text();
+					var $gender = $(o).find("gender").text();
+
+					var row = $("<tr />").append(
+						$("<td />").text($id),
+						$("<td />").text($first_name),
+						$("<td />").text($last_name),
+						$("<td />").text($email),
+						$("<td />").text($gender)
+					);
+				})
+
 				for(var i in data) {
 					var $id = data[i].id;
 					var $first_name = data[i].first_name;
